@@ -6,5 +6,15 @@
         {
             InitializeComponent();
         }
+
+        private void OnPrimaryDrawerToggled(object sender, EventArgs e)
+        {
+            navigationDrawer.ToggleDrawer();
+        }
+
+        private void OnSecondaryDrawerToggled(object sender, EventArgs e)
+        {
+            navigationDrawer.ToggleSecondaryDrawer();
+        }
     }
 }
