@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationDrawer.MainPage"
+             xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
+
+    <navigationDrawer:SfNavigationDrawer>
+        <navigationDrawer:SfNavigationDrawer.ContentView>
+            <Grid>
+                <Label Text="Swipe from left or right edge to open drawers." HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" Margin="16" />
+            </Grid>
+        </navigationDrawer:SfNavigationDrawer.ContentView>
+
+        <!-- Primary drawer settings -->
+        <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+            <navigationDrawer:DrawerSettings Position="Left" DrawerWidth="300" EnableSwipeGesture="True" Transition="SlideOnTop">
+                <navigationDrawer:DrawerSettings.DrawerHeaderView>
+                    <Grid>
+                        <Label Text="Primary Drawer" FontAttributes="Bold" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                    </Grid>
+                </navigationDrawer:DrawerSettings.DrawerHeaderView>
+                <navigationDrawer:DrawerSettings.DrawerContentView>
+                    <ScrollView>
+                        <VerticalStackLayout Padding="12" Spacing="2">
+                            <Label Text="Inbox" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Drafts" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Sent" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Starred" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Spam" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Trash" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </navigationDrawer:DrawerSettings.DrawerContentView>
+            </navigationDrawer:DrawerSettings>
+        </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+
+        <!-- Secondary drawer settings -->
+        <navigationDrawer:SfNavigationDrawer.SecondaryDrawerSettings>
+            <navigationDrawer:DrawerSettings Position="Right" DrawerWidth="300" EnableSwipeGesture="True" Transition="SlideOnTop">
+                <navigationDrawer:DrawerSettings.DrawerHeaderView>
+                    <Grid>
+                        <Label Text="Secondary Drawer" FontAttributes="Bold" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                    </Grid>
+                </navigationDrawer:DrawerSettings.DrawerHeaderView>
+                <navigationDrawer:DrawerSettings.DrawerContentView>
+                    <ScrollView>
+                        <VerticalStackLayout Padding="12" Spacing="2">
+                            <Label Text="Settings" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Preferences" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Filters" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Help" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="About" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </navigationDrawer:DrawerSettings.DrawerContentView>
+            </navigationDrawer:DrawerSettings>
+        </navigationDrawer:SfNavigationDrawer.SecondaryDrawerSettings>
+    </navigationDrawer:SfNavigationDrawer>
+
+</ContentPage>
